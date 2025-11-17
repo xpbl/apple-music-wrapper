@@ -31,9 +31,9 @@ int main(int argc, char *argv[], char *envp[]) {
         perror("chroot");
         return 1;
     }
-    mknod("/dev/urandom", S_IFCHR | 0666, makedev(0x1, 0x9));
-    chmod("/system/bin/linker64", 0755);
-    chmod("/system/bin/main", 0755);
+    /// mknod("/dev/urandom", S_IFCHR | 0666, makedev(0x1, 0x9));  /// should work on docker rootless now 
+    //  chmod("/system/bin/linker64", 0755);                        //
+    /// chmod("/system/bin/main", 0755);                           ///
 
     child_proc = fork();
     if (child_proc == -1) {

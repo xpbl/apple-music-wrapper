@@ -84,7 +84,7 @@ dkms.conf
 *.exe
 *.out
 *.app
-
+.env
 rootfs/
 .vscode/
 wrapper
